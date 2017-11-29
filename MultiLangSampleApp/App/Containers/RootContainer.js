@@ -19,17 +19,18 @@ const AppNavigator = StackNavigator({
   Settings: {
     screen: SettingsContainer,
     navigationOptions: {
-      title: (navigation) => {
-        return navigation.state.params.title
-      }
+      // title: (navigation) => {
+      //   return navigation.state.params.title
+      // }
+
     }
   },
   About:{
     screen: About,
     navigationOptions: {
-      title: (navigation) => {
-        return navigation.state.params.title
-      }
+      // title: (navigation) => {
+      //   return navigation.state.params.title
+      // }
     }
   }
 })

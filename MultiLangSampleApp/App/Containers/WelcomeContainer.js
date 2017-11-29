@@ -40,19 +40,23 @@ class WelcomeContainer extends Component {
           { I18n.t('home.instruction', { locale: language }) }
         </Text>
         <MyButton buttonTitle={ I18n.t('home.go_to', { locale: language }).toUpperCase() + " " + I18n.t('settings.title', { locale: language }).toUpperCase() }
-                  onButtonPress={ () => navigate('Settings', {
+                  onButtonPress={ () => navigate('Settings',
+                      {
+                                    // title: I18n.t('settings.title', { locale: language }) // <- passing the title here
                                     title: I18n.t('settings.title', { locale: language }) // <- passing the title here
-                                  }) 
+                      })
                                 } />
         <MyButton buttonTitle={ I18n.t('home.go_to', { locale: language }).toUpperCase() + " " + I18n.t('about.title', { locale: language }).toUpperCase() }
                   onButtonPress={ () => navigate('About', {
                                     title: I18n.t('about.title', { locale: language }) // <- passing the title here
-                                  }) 
+                                  })
                                 } />
       </View>
     )
   }
 }
+// onPress={() => navigate('NavigationDemo1', {user: 'wilson'})}
+// title="react-navigation 传递参数"/>
 
 const mapStateToProps = (state) => {
   return {
